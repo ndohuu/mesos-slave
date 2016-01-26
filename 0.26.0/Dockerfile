@@ -22,7 +22,9 @@ ENV MESOS_EXECUTOR_REGISTRATION_TIMEOUT 5mins
 VOLUME /tmp/mesos
 
 COPY entrypoint.sh /
+COPY discover_ip.sh /
 
 RUN chmod a+x /entrypoint.sh
+RUN chmod a+x /discover_ip.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
